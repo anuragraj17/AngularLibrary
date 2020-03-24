@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private route : ActivatedRoute) { }
 
   ngOnInit() {
-    this.userName = this.route.snapshot.queryParams['userName'];
+    this.userName = window.localStorage.getItem("userName");
     console.log(this.userName);
   }
 

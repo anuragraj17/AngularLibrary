@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './component/home/home.component';
 import { ErrorComponent } from './GlobalError/error/error.component';
 import { CustomErrorService } from './GlobalError/custom-error.service';
+import { HeaderComponent } from './component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CustomErrorService } from './GlobalError/custom-error.service';
     LoginComponent,
     PageNotFoundComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

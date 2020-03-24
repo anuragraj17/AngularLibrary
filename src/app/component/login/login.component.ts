@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../service/LoginService/login.service';
 import {User} from '../../model/user.model';
-import { ActivatedRoute, Router } from "@angular/router";
+import {Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -24,13 +24,8 @@ export class LoginComponent implements OnInit {
     this._login.loginUser(this.loginUserData).subscribe(
       data => {
       this.users = data;
-      //window.localStorage.setItem("userName",this.users['uname']);
-      this.router.navigate(['/home'] , {
-        queryParams : { 
-          'userName' : this.users['uname'] 
-        },
-        queryParamsHandling: 'merge' 
-      })
+      window.localStorage.setItem("userName",this.users['uname']);
+      this.router.navigateByUrl('/home');
     },
       err => this.errorMsg = err,
     )
