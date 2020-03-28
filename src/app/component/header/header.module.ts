@@ -16,9 +16,11 @@ import { RegisterService } from 'src/app/service/RegisterService/register.servic
 import { LoginService } from 'src/app/service/LoginService/login.service';
 import { CustomErrorService } from 'src/app/GlobalError/custom-error.service';
 import { RouterModule } from '@angular/router';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
+    DashboardComponent,
     RegisterComponent,
     LoginComponent,
     PageNotFoundComponent,

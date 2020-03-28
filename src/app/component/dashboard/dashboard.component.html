@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg nav-dark bg-dark">
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <div *ngIf="!isUserLogIn">
+        <a class="nav-link"  routerLink = "/login" routerLinkActive="active">Login</a>
+        <a class="nav-link" routerLink = "/register" routerLinkActive="active">Register</a>
+      </div>
+      <div *ngIf="isUserLogIn">
+        <a class="nav-link" (click)= "logOutAuthUser()"  routerLink = "/login" routerLinkActive="active">Log Out</a>
+      </div>
+    </ul>
+  </div>
+</nav>

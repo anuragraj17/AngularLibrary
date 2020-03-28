@@ -8,13 +8,14 @@ import { HomeComponent } from './component/home/home.component';
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ErrorComponent } from './GlobalError/error/error.component';
 import { HeaderComponent } from './component/header/header.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 
 const routes : Routes = [
   {
     path : '', component : HeaderComponent,
     children : [{
-      path : '', redirectTo : '/login', pathMatch : 'full' 
+      path : '', component : DashboardComponent
     },
     { path : 'login', component : LoginComponent},
     { path : 'register', component : RegisterComponent },
