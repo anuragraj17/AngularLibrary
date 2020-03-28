@@ -7,16 +7,22 @@ import { RegisterComponent } from './component/register/register.component';
 import { HomeComponent } from './component/home/home.component';
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ErrorComponent } from './GlobalError/error/error.component';
+import { HeaderComponent } from './component/header/header.component';
 
 
 const routes : Routes = [
-  { path : '',  redirectTo : '/login', pathMatch : 'full' },
-  { path : 'login', component : LoginComponent},
-  { path : 'register', component : RegisterComponent },
-  { path : 'home', component : HomeComponent },
-  { path : 'error', component : ErrorComponent},
-  { path : '**' , component : PageNotFoundComponent}
-];
+  {
+    path : '', component : HeaderComponent,
+    children : [{
+      path : '', redirectTo : '/login', pathMatch : 'full' 
+    },
+    { path : 'login', component : LoginComponent},
+    { path : 'register', component : RegisterComponent },
+    { path : 'home', component : HomeComponent },
+    { path : 'error', component : ErrorComponent},
+    { path : '**' , component : PageNotFoundComponent}
+  ]
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes),
