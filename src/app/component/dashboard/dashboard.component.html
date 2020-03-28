@@ -1,6 +1,6 @@
 <div id="page-content-wrapper">
   <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+    <a (click)="sidenav.toggle()" class="navbar-toggler-icon" id="menu-toggle"></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -27,10 +27,11 @@
         </li>
       </ul>
     </div>
-    <div class="collapse navbar-collapse">
+    <div class="float-right">
       <ul class="navbar-nav">
         <a class="nav-link" *ngIf="!isUserLogIn" routerLink = "/login" routerLinkActive="active">SignIn</a>
         <a class="nav-link" (click)= "logOutAuthUser()" *ngIf="isUserLogIn"  routerLink = "/login" routerLinkActive="active">Log Out</a>
+        <h6 style="vertical-align: middle;" draggable="true" *ngIf="isUserLogIn" >Hello {{userName}}</h6>
       </ul>
     </div>
   </nav>
@@ -49,4 +50,7 @@
     </div> -->
   </nav>
 </div>
+<script>
+  
+</script>
 
