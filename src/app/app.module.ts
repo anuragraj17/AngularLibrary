@@ -6,7 +6,7 @@ import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HeaderModule } from './component/header/header.module';
+import { DefaultModule } from './component/default/default.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { HeaderModule } from './component/header/header.module';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    HeaderModule
+    DefaultModule,
   ],
   providers: [HttpModule,HttpClientModule],
   bootstrap: [AppComponent]
