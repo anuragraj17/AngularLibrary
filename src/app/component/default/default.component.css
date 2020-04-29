@@ -1,0 +1,11 @@
+.vl {
+    border-left: 1px solid green;
+    height: 100%;
+    position: absolute;
+    left: 99%;
+    margin-left: 2px;
+    top: 0;
+  }
+  .pd{
+      padding-left: 1%;
+  }
