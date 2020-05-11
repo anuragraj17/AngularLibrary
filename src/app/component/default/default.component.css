@@ -7,16 +7,9 @@
     top: 0;
   }
   .pd{
-      padding-left: 1%;
+      padding-right: 1%;
   }
  .sideBar-menu {
-    /* position: fixed;
-    background: rgb(139, 209, 214);
-    text-decoration-color: springgreen;
-    width: 200px;
-    max-width: 200px;
-    padding-left: 2; */
-
     position: inherit;
     background-attachment: #e6c9c9;
     background-color: rgb(231, 216, 216);
