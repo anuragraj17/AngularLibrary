@@ -1,9 +1,9 @@
-<app-header (toggleSideBarCheck) ="sideBarToogler($event)"></app-header>
+<app-header  (toggleSideBarCheck) ="sideBarToogler($event)"></app-header>
 
 <div class="d-md-flex h-md-100 align-items-center">
-    <div class="col-md-2 p-0 bg-indigo h-md-30" *ngIf = "!sideBaropen">
+    <div class="sideBar-menu" *ngIf = "!sideBaropen">
         <app-sidebar></app-sidebar>
-        <div class="vl"></div>
+        <!-- <div class="vl"></div> -->
     </div>
     <div class="col-md-10 p-0 bg-white h-md-100 loginarea pd">
         <router-outlet></router-outlet>

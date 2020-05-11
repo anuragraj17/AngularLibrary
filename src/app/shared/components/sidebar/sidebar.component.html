@@ -1,9 +1,19 @@
-<div>
-    profile
-</div>
-<div>
-  Menu
-</div>
-<div>
-  Contact
+<!-- <div class="position-fixed bg-dark text-white h-100 w-sidebar pl-2">
+  <ul class="menu">
+    <li><a class="nav-link" *ngIf="!isUserLogIn" href = "/login" routerLinkActive="active">Profile</a></li>
+    <li><a routerLink ="/">Address</a></li>
+    <li><a routerLink ="/">Contact</a></li>
+  </ul>
+</div> -->
+<div class="col-3 p-0 vh-100 h-100 w-sidebar navbar-collapse collapse d-none d-md-flex sidebar">
+  <!-- fixed sidebar -->
+  <div class="menu">
+      <ul class="nav flex-column">
+          <li class="nav-item">
+              <a class="nav-link active" *ngIf="!isUserLogIn" href = "/login">Profile</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Address</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+  </div>
 </div>

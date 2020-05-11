@@ -2,10 +2,33 @@
     border-left: 1px solid green;
     height: 100%;
     position: absolute;
-    left: 99%;
+    left: 10%;
     margin-left: 2px;
     top: 0;
   }
   .pd{
       padding-left: 1%;
   }
+ .sideBar-menu {
+    /* position: fixed;
+    background: rgb(139, 209, 214);
+    text-decoration-color: springgreen;
+    width: 200px;
+    max-width: 200px;
+    padding-left: 2; */
+
+    position: inherit;
+    background-attachment: #e6c9c9;
+    background-color: rgb(231, 216, 216);
+    height: 200%;
+    width: 200px;
+    padding: 2em 3 em;
+    box-shadow: 0 0 2.5em rgba(85 85,85, 0.5);
+    scroll-behavior: auto;
+}
+.dashboard-menu {
+    background-attachment: #f4f4f4;
+    width: 90px;
+    padding: 2em 3 em;
+    box-shadow: 0 0 2.5em rgba(85 85,85, 0.5);
+}

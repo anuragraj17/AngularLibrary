@@ -17,6 +17,7 @@ import { RegisterService } from 'src/app/service/RegisterService/register.servic
 import { LoginService } from 'src/app/service/LoginService/login.service';
 import { CustomErrorService } from 'src/app/GlobalError/custom-error.service';
 import { SharedModule } from 'src/app/shared/shared.module';
+import {SidebarModule} from 'ng-sidebar'
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     FormsModule,
     AppRoutingModule,
     SharedModule,
+    SidebarModule.forRoot()
   ],
   declarations: [
     DefaultComponent,
