@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { MatDialog} from "@angular/material";
+import { LoginComponent } from 'src/app/component/login/login.component';
 
 
 @Component({
@@ -8,7 +10,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialouge : MatDialog) { }
 
   @Output() toggleSideBarCheck : EventEmitter<any> =  new EventEmitter<any>();
 
@@ -16,5 +18,11 @@ export class HeaderComponent implements OnInit {
   }
   toggleSideBar(){
     this.toggleSideBarCheck.emit();
+  }
+  openSignIn(){
+    this.dialouge.open(LoginComponent,{
+      height: '600px',
+      width: '800px'
+    });
   }
 }

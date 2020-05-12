@@ -1,6 +1,5 @@
-<app-dashboard></app-dashboard>
-<nav class="row pt-5">
-    <div class="col-md-4 mx-auto">
+<nav class="row pt-4">
+    <div class="col-md-8 mx-auto">
       <h3 class="text-danger">{{errorMsg}}</h3>
       <div class="card rounded-1">
         <div class="card-header">
@@ -18,10 +17,11 @@
             </div>
             
             <button (click)= "loginAuthUser()"  type="button" class="btn btn-success float-right">Log In</button>
-            <button  routerLink = "/register" routerLinkActive="active" type="button" class="btn btn-success float-left">Sign Up</button>
+            <button (click)= "openSignUpModal()"  type="button" class="btn btn-success float-left">Sign Up</button>
+            <!-- <button  routerLink = "/register" routerLinkActive="active" type="button" class="btn btn-success float-left">Sign Up</button> -->
           </form>
         </div>
       </div>
     </div>
-  </nav>
+</nav>
   

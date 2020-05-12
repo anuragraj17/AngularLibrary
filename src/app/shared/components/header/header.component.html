@@ -33,7 +33,8 @@
     </div>
     <div class="float-right">
       <ul class="navbar-nav">
-        <a class="nav-link" *ngIf="!isUserLogIn" href = "/login" routerLinkActive="active">SignIn</a>
+        <a class="nav-link" *ngIf="!isUserLogIn" (click)= "openSignIn()" routerLinkActive="active">SignIn</a>
+        <!-- <a class="nav-link" *ngIf="!isUserLogIn" href = "/login" routerLinkActive="active">SignIn</a> -->
         <a class="nav-link" (click)= "logOutAuthUser()" *ngIf="isUserLogIn"  routerLink = "/login" routerLinkActive="active">Log Out</a>
         <h6 style="vertical-align: middle;" draggable="true" *ngIf="isUserLogIn" >Hello {{userName}}</h6>
       </ul>

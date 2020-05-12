@@ -7,6 +7,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DefaultModule } from './component/default/default.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  MatDialogModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { DefaultModule } from './component/default/default.module';
     FormsModule,
     AppRoutingModule,
     DefaultModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [HttpModule,HttpClientModule],
   bootstrap: [AppComponent]
