@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterService } from '../../service/RegisterService/register.service';
+import {MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,7 @@ import { RegisterService } from '../../service/RegisterService/register.service'
 export class RegisterComponent implements OnInit {
 
   registerUserData = {};
-  constructor(private _reg : RegisterService) { }
+  constructor(private _reg : RegisterService,public dialogBox : MatDialogRef<RegisterComponent>) { }
 
   ngOnInit() {
   }
@@ -19,5 +20,8 @@ export class RegisterComponent implements OnInit {
       res =>  console.log(res),
       err => console.log(err)
     )
+  }
+  hideSignUpModal(){
+    this.dialogBox.close();
   }
 }

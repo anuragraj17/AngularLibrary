@@ -22,7 +22,8 @@ export class HeaderComponent implements OnInit {
   openSignIn(){
     this.dialouge.open(LoginComponent,{
       height: '600px',
-      width: '800px'
+      width: '800px',
+      panelClass: 'login-dialog'
     });
   }
 }

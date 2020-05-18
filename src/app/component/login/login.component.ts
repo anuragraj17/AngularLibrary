@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../service/LoginService/login.service';
 import {User} from '../../model/user.model';
 import {Router } from "@angular/router";
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material';
 import { RegisterComponent } from '../register/register.component';
 
 @Component({
@@ -16,7 +16,11 @@ export class LoginComponent implements OnInit {
   loginUserData = {};
   public errorMsg: any;
 
-  constructor(private _login : LoginService, private router : Router,public dialouge : MatDialog) {  }
+  constructor(private _login : LoginService, 
+    private router : Router,
+    public dialouge : MatDialog,
+    public dialogBox : MatDialogRef<LoginComponent>
+    ) {  }
 
   ngOnInit() {
   }
@@ -34,9 +38,14 @@ export class LoginComponent implements OnInit {
   }
 
   openSignUpModal(){
+    this.hideLoginModal();
     this.dialouge.open(RegisterComponent,{
       height: '600px',
-      width: '800px'
+      width: '800px',
+      panelClass: 'signup-dialog'
     });
+  }
+  hideLoginModal(){
+    this.dialogBox.close();
   }
 }
